@@ -8,20 +8,22 @@ public class Death : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
- 
+      
     }
 
     // Update is called once per frame
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        this.gameObject.transform.position = new Vector3(-5, 3, 1);
+        //Makes GameObject transform when the mouse is down
+        gameObject.transform.position = new Vector3(Random.Range(-8, 8), Random.Range(-3, 1), 1);
     }
-    private void OnMouseExit()
+    public void OnMouseExit()
     {
-        this.gameObject.transform.position = new Vector3(Random.Range(-5,5), Random.Range(-2,2), 0);
-  
+        //Makes gameObject transform upon mouse exit
+        gameObject.transform.position = new Vector3(Random.Range(-8, 8), Random.Range(-3, 1), -5);
     }
     void Update()
-            {
-            }
-        }
+    {
+       
+    }
+}
