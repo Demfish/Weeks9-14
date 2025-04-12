@@ -26,7 +26,7 @@ public class PointCounter : MonoBehaviour
     }
     private IEnumerator GameOver()
     {
-            float idleTime = 0f;
+            float idleTime = 0;
 
             //Checking each frame
             while (true)
@@ -35,11 +35,11 @@ public class PointCounter : MonoBehaviour
                 float mouseX = Input.GetAxis("Mouse X");
                 float mouseY = Input.GetAxis("Mouse Y");
 
-                if ((mouseX) < 0.1f && (mouseY) < 0.1f)
+                if ((mouseX) < 0.1 && (mouseY) < 0.1)
                 {
                     idleTime += Time.deltaTime;
                 //2 seconds gives little time to slow, but just enough
-                    if (idleTime >= 2f)
+                    if (idleTime >= 2)
                     {
                         //Deactivate gameObject
                         gameObject.SetActive(false);
@@ -48,7 +48,7 @@ public class PointCounter : MonoBehaviour
                 }
                 else
                 {
-                    idleTime = 0f; // Reset if any mouse movement
+                    idleTime = 0; // Reset if any mouse movement
                 }
 
             yield return null;
