@@ -22,8 +22,5 @@ public class Death : MonoBehaviour
         //Makes gameObject transform upon mouse exit
         gameObject.transform.position = new Vector3(Random.Range(-8, 8), Random.Range(-3, 1), -5);
     }
-    void Update()
-    {
-       
-    }
+   
 }

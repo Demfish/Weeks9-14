@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Points code helped to be made with video by Velvary
 public class PointHUD : MonoBehaviour
 {
 
